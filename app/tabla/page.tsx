@@ -1,19 +1,38 @@
+"use client";
+
+import { motion } from "framer-motion";
 import FeaturedContent from "./FeaturedContent";
 
 export default function TablaPage() {
+  const fadeUp = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: "-100px" },
+    transition: { duration: 0.5, ease: "easeOut" as const },
+  };
+
   return (
     <main className="min-h-screen bg-ink text-paper px-6 py-20">
-      <div className="max-w-4xl mx-auto">
-       <nav className="flex items-center justify-between mb-16 max-w-4xl mx-auto">
-  <a href="/" className="hover:text-paper transition-colors text-sm" style={{ color: "#8B8B85" }}>
-    &larr; home
-  </a>
-  <a href="/work" className="hover:text-paper transition-colors text-sm" style={{ color: "#1F6F6B" }}>
-    work &rarr;
-  </a>
-</nav>
+      <div className="max-w-3xl mx-auto">
+        <nav className="flex items-center justify-between mb-16 max-w-3xl mx-auto">
+          <a
+            href="/"
+            className="hover:text-paper transition-colors text-sm"
+            style={{ color: "#8B8B85" }}
+          >
+            &larr; home
+          </a>
+          <a
+            href="/work"
+            className="hover:text-paper transition-colors text-sm"
+            style={{ color: "#1F6F6B" }}
+          >
+            work &rarr;
+          </a>
+        </nav>
+
         {/* Hero */}
-        <section className="mb-24">
+        <motion.section {...fadeUp} className="mb-24">
           <div className="text-gold text-sm mb-4">tabla</div>
           <h1
             className="text-3xl md:text-4xl mb-3"
@@ -27,10 +46,10 @@ export default function TablaPage() {
           >
             Tabla player. Covers, camp content, and community music.
           </p>
-        </section>
+        </motion.section>
 
         {/* About */}
-        <section className="mb-24">
+        <motion.section {...fadeUp} className="mb-24">
           <h2
             className="text-xl mb-8 text-gold"
             style={{ fontFamily: "var(--font-display)" }}
@@ -74,10 +93,10 @@ export default function TablaPage() {
               </p>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Featured Content */}
-        <section className="mb-24">
+        <motion.section {...fadeUp} className="mb-24">
           <h2
             className="text-xl mb-8 text-gold"
             style={{ fontFamily: "var(--font-display)" }}
@@ -85,10 +104,10 @@ export default function TablaPage() {
             Featured content
           </h2>
           <FeaturedContent />
-        </section>
+        </motion.section>
 
         {/* Teaching & Performance */}
-        <section className="mb-24">
+        <motion.section {...fadeUp} className="mb-24">
           <h2
             className="text-xl mb-8 text-gold"
             style={{ fontFamily: "var(--font-display)" }}
@@ -121,10 +140,10 @@ export default function TablaPage() {
               </p>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Upcoming */}
-        <section className="mb-24">
+        <motion.section {...fadeUp} className="mb-24">
           <h2
             className="text-xl mb-8 text-gold"
             style={{ fontFamily: "var(--font-display)" }}
@@ -141,10 +160,10 @@ export default function TablaPage() {
               First planned YouTube uploads
             </li>
           </ul>
-        </section>
+        </motion.section>
 
         {/* Connect */}
-        <section>
+        <motion.section {...fadeUp}>
           <h2
             className="text-xl mb-6 text-gold"
             style={{ fontFamily: "var(--font-display)" }}
@@ -167,7 +186,7 @@ export default function TablaPage() {
               tiktok — @bhumeet.music
             </a>
           </div>
-        </section>
+        </motion.section>
       </div>
     </main>
   );

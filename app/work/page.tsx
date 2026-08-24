@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function WorkPage() {
   const projects = [
     {
@@ -75,19 +79,35 @@ export default function WorkPage() {
     "Top-30 finish, state-wide Rubik's Cube competition (WCA)",
   ];
 
+  const fadeUp = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: "-100px" },
+    transition: { duration: 0.5, ease: "easeOut" as const },
+  };
+
   return (
     <main className="min-h-screen bg-ink text-paper px-6 py-20">
       <div className="max-w-3xl mx-auto">
-            <nav className="flex items-center justify-between mb-16 max-w-3xl mx-auto">
-  <a href="/" className="hover:text-paper transition-colors text-sm" style={{ color: "#8B8B85" }}>
-    &larr; home
-  </a>
-  <a href="/tabla" className="hover:text-paper transition-colors text-sm" style={{ color: "#E0A526" }}>
-    tabla &rarr;
-  </a>
-</nav>
+        <nav className="flex items-center justify-between mb-16 max-w-3xl mx-auto">
+          <a
+            href="/"
+            className="hover:text-paper transition-colors text-sm"
+            style={{ color: "#8B8B85" }}
+          >
+            &larr; home
+          </a>
+          <a
+            href="/tabla"
+            className="hover:text-paper transition-colors text-sm"
+            style={{ color: "#E0A526" }}
+          >
+            tabla &rarr;
+          </a>
+        </nav>
+
         {/* Hero */}
-        <section className="mb-24">
+        <motion.section {...fadeUp} className="mb-24">
           <div
             className="text-teal text-sm mb-4"
             style={{ fontFamily: "var(--font-mono)" }}
@@ -104,10 +124,10 @@ export default function WorkPage() {
             B.S. Informatics, Data Science Concentration + CS Minor —
             UMass Amherst, Commonwealth Honors College
           </p>
-        </section>
+        </motion.section>
 
         {/* About */}
-        <section className="mb-24">
+        <motion.section {...fadeUp} className="mb-24">
           <h2
             className="text-xl mb-8 text-teal"
             style={{ fontFamily: "var(--font-display)" }}
@@ -144,10 +164,10 @@ export default function WorkPage() {
               </p>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Projects */}
-        <section className="mb-24">
+        <motion.section {...fadeUp} className="mb-24">
           <h2
             className="text-xl mb-8 text-teal"
             style={{ fontFamily: "var(--font-display)" }}
@@ -183,10 +203,10 @@ export default function WorkPage() {
               </div>
             ))}
           </div>
-        </section>
+        </motion.section>
 
         {/* Experience */}
-        <section className="mb-24">
+        <motion.section {...fadeUp} className="mb-24">
           <h2
             className="text-xl mb-8 text-teal"
             style={{ fontFamily: "var(--font-display)" }}
@@ -211,10 +231,10 @@ export default function WorkPage() {
               </div>
             ))}
           </div>
-        </section>
+        </motion.section>
 
         {/* Skills */}
-        <section className="mb-24">
+        <motion.section {...fadeUp} className="mb-24">
           <h2
             className="text-xl mb-8 text-teal"
             style={{ fontFamily: "var(--font-display)" }}
@@ -240,10 +260,10 @@ export default function WorkPage() {
               </div>
             ))}
           </div>
-        </section>
+        </motion.section>
 
         {/* Awards */}
-        <section className="mb-24">
+        <motion.section {...fadeUp} className="mb-24">
           <h2
             className="text-xl mb-8 text-teal"
             style={{ fontFamily: "var(--font-display)" }}
@@ -258,10 +278,10 @@ export default function WorkPage() {
               </li>
             ))}
           </ul>
-        </section>
+        </motion.section>
 
         {/* Contact */}
-        <section>
+        <motion.section {...fadeUp}>
           <h2
             className="text-xl mb-6 text-teal"
             style={{ fontFamily: "var(--font-display)" }}
@@ -269,17 +289,21 @@ export default function WorkPage() {
             Contact
           </h2>
           <div className="flex flex-col gap-2 text-sm">
-  <a href="mailto:bhumeetsb@gmail.com" className="text-neutral hover:text-paper transition-colors">
-    bhumeetsb@gmail.com
-  </a>
-  <a href="https://www.linkedin.com/in/bhumeet-singh" className="text-neutral hover:text-paper transition-colors">
-    linkedin.com/in/bhumeet-singh
-  </a>
-  <a href="https://github.com/bhumeet-singh" className="text-neutral hover:text-paper transition-colors">
-    github.com/bhumeet-singh
-  </a>
-</div>
-        </section>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=bhumeetsb@gmail.com"
+              target="_blank"
+              className="text-neutral hover:text-paper transition-colors"
+            >
+              bhumeetsb@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/bhumeet-singh" className="text-neutral hover:text-paper transition-colors">
+              linkedin.com/in/bhumeet-singh
+            </a>
+            <a href="https://github.com/bhumeet-singh" className="text-neutral hover:text-paper transition-colors">
+              github.com/bhumeet-singh
+            </a>
+          </div>
+        </motion.section>
       </div>
     </main>
   );
