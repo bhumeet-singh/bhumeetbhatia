@@ -78,6 +78,14 @@ export default function WorkPage() {
   return (
     <main className="min-h-screen bg-ink text-paper px-6 py-20">
       <div className="max-w-3xl mx-auto">
+            <nav className="flex items-center justify-between mb-16 max-w-3xl mx-auto">
+  <a href="/" className="hover:text-paper transition-colors text-sm" style={{ color: "#8B8B85" }}>
+    &larr; home
+  </a>
+  <a href="/tabla" className="hover:text-paper transition-colors text-sm" style={{ color: "#E0A526" }}>
+    tabla &rarr;
+  </a>
+</nav>
         {/* Hero */}
         <section className="mb-24">
           <div
