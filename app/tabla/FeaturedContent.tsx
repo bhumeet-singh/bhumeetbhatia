@@ -4,17 +4,17 @@ const posts = [
   {
     image: "/tabla/haaland-tabla.jpg",
     title: "Haaland x Tabla",
-    url: "https://www.instagram.com/reel/DRqpiuKjEr7/",
+    url: "https://www.instagram.com/reels/Da8JbYWRXEe/",
   },
   {
     image: "/tabla/malaar-duet.jpg",
     title: "Bhagat Naam Dev Ji — Raag Malaar",
-    url: "https://www.instagram.com/reels/Da8JbYWRXEe/",
+    url: "https://www.instagram.com/reel/DaxsoxJxf_u/",
   },
   {
     image: "/tabla/tiger-sweater.jpg",
-    title: "Dholki cover",
-    url: "https://www.instagram.com/reel/DaxsoxJxf_u/",
+    title: "Dhol cover",
+    url: "https://www.instagram.com/reels/DRqpiuKjEr7/",
   },
 ];
 
