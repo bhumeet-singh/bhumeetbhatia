@@ -125,14 +125,28 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: contentDelay + 0.4 }}
-        className="mt-16 text-neutral text-sm"
-      >
-        email &middot; github &middot; instagram
-      </motion.div>
+     <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.5, delay: contentDelay + 0.4 }}
+  className="mt-16 flex items-center gap-3 text-neutral text-sm"
+>
+  <a
+    href ="https://mail.google.com/mail/?view=cm&fs=1&to=bhumeetsb@gmail.com"
+    target ="_blank"
+    className ="hover:text-paper transition-colors"
+  >
+    email
+  </a>
+  <span>&middot;</span>
+  <a href="https://www.linkedin.com/in/bhumeet-singh" className="hover:text-paper transition-colors">
+    linkedin
+  </a>
+  <span>&middot;</span>
+  <a href="https://www.instagram.com/singh.bhumeet" className="hover:text-paper transition-colors">
+    instagram
+  </a>
+</motion.div>
     </main>
   );
 }
