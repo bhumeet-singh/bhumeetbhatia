@@ -88,8 +88,7 @@ export default function TablaPage() {
               </div>
               <p>
                 Expanding from Instagram and TikTok into YouTube — camp
-                recaps, day-in-my-life content, and cinematic pieces
-                without talking.
+                recaps, day-in-my-life content, and cinematic pieces.
               </p>
             </div>
           </div>
