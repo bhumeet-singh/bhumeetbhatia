@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@theme {
+  --color-ink: #17181D;
+  --color-paper: #EAE8E2;
+  --color-teal: #1F6F6B;
+  --color-gold: #E0A526;
+  --color-neutral: #8B8B85;
+
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-mono);
+}
