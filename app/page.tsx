@@ -68,7 +68,7 @@ export default function Home() {
               className="h-full flex flex-col items-center justify-center border border-neutral/30 rounded-lg px-6 py-12 text-center"
             >
               <div className="text-teal text-sm mb-4" style={{ fontFamily: "var(--font-mono)" }}>
-                &lt;work/&gt;
+                work
               </div>
               <div className="text-paper text-xl mb-2" style={{ fontFamily: "var(--font-display)" }}>
                 Work

@@ -28,6 +28,19 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Bhumeet Bhatia",
   description: "Building software, tracking bugs, and playing tabla.",
+  openGraph: {
+    title: "Bhumeet Bhatia",
+    description: "Building software, tracking bugs, and playing tabla.",
+    url: "https://bhumeetbhatia.vercel.app",
+    siteName: "Bhumeet Bhatia",
+    images: [
+      {
+        url: "https://bhumeetbhatia.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
