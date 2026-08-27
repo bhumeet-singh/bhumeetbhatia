@@ -112,7 +112,7 @@ export default function WorkPage() {
             className="text-teal text-sm mb-4"
             style={{ fontFamily: "var(--font-mono)" }}
           >
-            &lt;work/&gt;
+            work
           </div>
           <h1
             className="text-3xl md:text-4xl mb-3"
